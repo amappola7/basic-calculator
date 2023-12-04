@@ -4,14 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ButtonComponent } from './ui/shared/button/button.component';
 import { CalculatorComponent } from './ui/pages/calculator/calculator.component';
+import { NumericButtonComponent } from './ui/shared/numeric-button/numeric-button.component';
+import { OperationButtonComponent } from './ui/shared/operation-button/operation-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    NumericButtonComponent,
+    OperationButtonComponent
   ],
   imports: [
     BrowserModule,

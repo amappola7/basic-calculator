@@ -1,4 +1,7 @@
 $font-family: 'League Spartan', sans-serif;
+$main-color: #48cae4;
+$secondary-color: #caf0f8;
+$white: #ffffff;
 
 @mixin displayFlex($flex-direction: row, $justify-content, $align-items, $gap: 0, $wrap: wrap) {
   display: flex;
@@ -18,4 +21,15 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.btn {
+  width: 4.4rem;
+  height: 4.4rem;
+  border: none;
+  border-radius: 50%;
+  font-family: $font-family;
+  font-size: 1.6rem;
+  color: $white;
+  background-color: $main-color;
 }
