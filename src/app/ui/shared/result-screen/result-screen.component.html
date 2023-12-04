@@ -1,0 +1,16 @@
+<div class="result-screen">
+  <div class="operation" *ngIf="status == 'operating'">
+    <div class="value1">
+      {{ value1 }}
+    </div>
+    <div class="operation" *ngIf="operation">
+      <fa-icon [icon]="icon"></fa-icon>
+    </div>
+    <div class="value2" *ngIf="value2">
+      {{ value2 }}
+    </div>
+  </div>
+  <div class="result" *ngIf="status == 'initial' || status == 'displayResult'">
+    {{ status == "initial" ? 0 : result }}
+  </div>
+</div>

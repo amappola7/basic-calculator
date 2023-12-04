@@ -1,12 +1,14 @@
 <section class="calculator">
   <div class="result">
+    <app-result-screen [value1]="value1" [value2]="value2" [operation]="operation" [status]="resultScreenStatus" [result]="result"></app-result-screen>
   </div>
   <div class="buttons">
     <div class="numbers">
-      <app-numeric-button *ngFor="let value of numericValues" [value]="value"></app-numeric-button>
+      <app-numeric-button *ngFor="let value of numericValues" [value]="value" (click)="getValue(value)"></app-numeric-button>
     </div>
     <div class="operations">
-      <app-operation-button *ngFor="let value of operationValues" [type]="value"></app-operation-button>
+      <app-operation-button *ngFor="let value of operationValues" [type]="value" (click)="getOperation(value)"></app-operation-button>
+      <app-operation-button [type]="5" (click)="getResult()"></app-operation-button>
     </div>
   </div>
 </section>

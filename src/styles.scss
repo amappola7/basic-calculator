@@ -1,7 +1,10 @@
 $font-family: 'League Spartan', sans-serif;
 $main-color: #48cae4;
 $secondary-color: #caf0f8;
+$black: #000000;
 $white: #ffffff;
+$grey: #a5a5a5;
+$dark-grey: #686868;
 
 @mixin displayFlex($flex-direction: row, $justify-content, $align-items, $gap: 0, $wrap: wrap) {
   display: flex;
@@ -32,4 +35,16 @@ html {
   font-size: 1.6rem;
   color: $white;
   background-color: $main-color;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: $secondary-color;
+  color: $black;
+}
+
+.btn:active {
+  cursor: pointer;
+  background-color: $main-color;
+  color: $white;
 }
