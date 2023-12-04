@@ -1,0 +1,33 @@
+@import '../../../../styles.scss';
+
+.calculator {
+  @include displayFlex(columns, center, flex-start);
+  width: 30rem;
+  height: 40rem;
+  border-radius: 4rem;
+  background-color: $dark-grey;
+  padding: 3rem;
+
+  .result {
+    width: 100%;
+  }
+
+  .buttons {
+    @include displayFlex(row, center, center);
+    width: 100%;
+    height: calc(100% - 7rem);
+    padding-top: 1.5rem;
+
+    .numbers {
+      @include displayFlex(row, center, center, 1.5rem);
+      width: 75%;
+      height: 100%;
+    }
+
+    .operations {
+      @include displayFlex(column, flex-start, flex-end, 0.8rem);
+      width: 25%;
+      height: 100%;
+    }
+  }
+}

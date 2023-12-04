@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { faPlus, faDivide, faMinus, faXmark, faEquals } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faDivide, faMinus, faXmark, faEquals, faC } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-operation-button',
@@ -15,7 +15,7 @@ export class OperationButtonComponent {
   }
 
   getIcon(type: number): void {
-    switch(type) {
+    switch (type) {
       case 1:
         this.icon = faPlus;
         break;
@@ -30,6 +30,9 @@ export class OperationButtonComponent {
         break;
       case 5:
         this.icon = faEquals;
+        break;
+      case 6:
+        this.icon = faC;
         break;
     }
   }

@@ -56,4 +56,10 @@ export class CalculatorComponent {
     this.resultScreenStatus = 'displayResult';
     this.result = this.calculateOperation(this.value1, this.value2, this.operation);
   }
+
+  clear() {
+    this.resultScreenStatus = 'initial';
+    this.value1 = 0;
+    this.value2 = 0;
+  }
 }
