@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPlus, faDivide, faMinus, faXmark, faEquals } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-calculator',
@@ -13,6 +14,7 @@ export class CalculatorComponent {
   operation: number | null = null;
   resultScreenStatus: string = 'initial';
   result: number = 0;
+  icon!: any;
 
   calculateOperation(value1: number, value2: number, operation: number) {
     let result = 0;
@@ -37,6 +39,23 @@ export class CalculatorComponent {
 
   getOperation(type: number): void {
     this.operation = type;
+    switch(type) {
+      case 1:
+        this.icon = faPlus;
+        break;
+      case 2:
+        this.icon = faMinus;
+        break;
+      case 3:
+        this.icon = faXmark;
+        break;
+      case 4:
+        this.icon = faDivide;
+        break;
+      case 5:
+        this.icon = faEquals;
+        break;
+    }
   }
 
   getValue(value: number): void {
@@ -62,5 +81,6 @@ export class CalculatorComponent {
     this.value1 = null;
     this.value2 = null;
     this.operation = null;
+    this.icon = null;
   }
 }
