@@ -9,14 +9,14 @@ import { faPlus, faDivide, faMinus, faXmark, faEquals } from '@fortawesome/free-
 export class ResultScreenComponent {
   icon!: any;
 
-  @Input() value1!: number;
-  @Input() value2!: number;
-  @Input() operation!: number;
+  @Input() value1!: number | null;
+  @Input() value2!: number | null;
+  @Input() operation!: number | null;
   @Input() result!: number;
   @Input() status: string = 'initial';
 
   onChanges() {
-    this.icon = this.getIcon(this.operation);
+    this.icon = this.getIcon(this.operation!);
   }
 
   getIcon(type: number): void {
