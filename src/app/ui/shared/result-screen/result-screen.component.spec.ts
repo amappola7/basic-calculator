@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResultScreenComponent } from './result-screen.component';
 
-xdescribe('ResultScreenComponent', () => {
+describe('ResultScreenComponent', () => {
   let component: ResultScreenComponent;
   let fixture: ComponentFixture<ResultScreenComponent>;
 

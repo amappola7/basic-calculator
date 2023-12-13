@@ -2,11 +2,15 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './ui/pages/calculator/calculator.component';
+import { ResultScreenComponent } from './ui/shared/result-screen/result-screen.component';
+import { OperationButtonComponent } from './ui/shared/operation-button/operation-button.component';
+import { NumericButtonComponent } from './ui/shared/numeric-button/numeric-button.component';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent, CalculatorComponent]
+    declarations: [AppComponent, CalculatorComponent, ResultScreenComponent, OperationButtonComponent, NumericButtonComponent, FaIconComponent]
   }));
 
   it('should create the app', () => {
