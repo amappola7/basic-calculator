@@ -7,7 +7,7 @@ export class CalculatorService {
 
   constructor() { }
 
-  calculateOperation(value1: number, value2: number, operation: number) {
+  calculateOperation(value1: number, value2: number, operation: number): number {
     let result = 0;
 
     switch(operation) {
@@ -27,5 +27,4 @@ export class CalculatorService {
 
     return result;
   }
-
 }
