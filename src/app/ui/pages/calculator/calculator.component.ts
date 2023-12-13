@@ -19,11 +19,11 @@ export class CalculatorComponent {
 
   constructor(
     private calculatorService: CalculatorService
-  ) {}
+  ) { }
 
   getOperation(type: number): void {
     this.operation = type;
-    switch(type) {
+    switch (type) {
       case 1:
         this.icon = faPlus;
         break;
@@ -43,8 +43,8 @@ export class CalculatorComponent {
   }
 
   getValue(value: number): void {
+    if (this.resultScreenStatus !== 'operating') this.resultScreenStatus = 'operating';
     const strValue = value.toString();
-    this.resultScreenStatus === 'operating' ? '' : this.resultScreenStatus = 'operating' ;
 
     if (this.operation == null) {
       const beforeValue: string = this.value1 == null ? '' : this.value1.toString();
