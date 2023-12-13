@@ -18,4 +18,10 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should render the calculator component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const calculatorComponent = fixture.nativeElement.querySelector('app-calculator');
+    expect(calculatorComponent).toBeTruthy();
+  })
 });
