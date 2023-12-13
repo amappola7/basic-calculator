@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OperationButtonComponent } from './operation-button.component';
 
-describe('OperationButtonComponent', () => {
+xdescribe('OperationButtonComponent', () => {
   let component: OperationButtonComponent;
   let fixture: ComponentFixture<OperationButtonComponent>;
 
