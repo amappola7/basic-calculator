@@ -47,34 +47,36 @@ describe('CalculatorComponent', () => {
     expect(component.resultScreenStatus).toBe('operating');
   });
 
-  xit('#getValue should concatenate value1', () => {
+  // Este es uno de los dos tests que están fallando
+  it('#getValue should concatenate value1', () => {
     component.icon = faPlus;
     const numericButton = fixture.nativeElement.querySelector('app-numeric-button');
 
-    // for (let i = 1; i <= 3; i++) {
-    //   console.log(i);
-    //   numericButton.setAttribute('value', i);
-    //   numericButton.click();
-    //   fixture.detectChanges();
-    // }
+    for (let i = 1; i <= 3; i++) {
+      console.log(i);
+      numericButton.setAttribute('value', i);
+      numericButton.click();
+      fixture.detectChanges();
+    }
 
     expect(component.value1).toBe(123);
     expect(component.value2).toEqual(null);
     expect(component.operation).toEqual(null);
   });
 
-  xit('#getValue should concatenate value2', () => {
+  // Este es el otro
+  it('#getValue should concatenate value2', () => {
     component.icon = faPlus;
     component.value1 = 100;
     component.operation = 1;
     const numericButton = fixture.nativeElement.querySelector('app-numeric-button');
 
-    // for (let i = 1; i <= 3; i++) {
-    //   console.log(i);
-    //   numericButton.setAttribute('value', i);
-    //   numericButton.click();
-    //   fixture.detectChanges();
-    // }
+    for (let i = 4; i <= 6; i++) {
+      console.log(i);
+      numericButton.setAttribute('value', i);
+      numericButton.click();
+      fixture.detectChanges();
+    }
 
     expect(component.value2).toEqual(456);
   });
